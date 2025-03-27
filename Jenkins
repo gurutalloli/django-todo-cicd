@@ -1,8 +1,0 @@
-FROM python:3
-RUN pip install django==3.2
-WORKDIR /usr/src/app
-COPY . /usr/src/app
-
-RUN python /usr/src/app/manage.py migrate
-EXPOSE 8000
-CMD ["python","/usr/src/app/manage.py","runserver","0.0.0.0:8000"]
