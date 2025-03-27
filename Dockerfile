@@ -3,7 +3,7 @@ FROM python:3
 WORKDIR /data
 
 RUN pip install django==3.2
-pip install --upgrade setuptools pip
+RUN pip install --upgrade setuptools pip
 
 COPY . .
 
